@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang='en' dir='ltr'>
+  <head>
+    <script type="text/javascript" src="/js/loader_nav212915079919_3.js"></script>
+    <script type="text/javascript">
+      (function() {
+var alertCont;
+function trackOldBrowserEvent(event) {
+  var xhr = new XMLHttpRequest();
+  xhr.open('GET', '/badbrowser_stat.php?act=track&event=' + event);
+  xhr.send();
+}
+function exposeGlobals() {
+  window.hideOldBrowser = function() {
+    alertCont.remove();
+    var date = new Date();
+    date.setTime(date.getTime() + (7 * 24 * 60 * 60 * 1000));
+    var expiresDate = date.toGMTString();
+    var domain = window.locDomain;
+    document.cookie = 'remixoldbshown=1; expires=' + expiresDate + '; path=/' + (domain ? '; domain=.' + domain : '') + ';secure';
+    trackOldBrowserEvent('hideAlert');
+  }
+}
+function checkOldBrowser() {
+  if(!document.body) {
+    setTimeout(checkOldBrowser, 100);
+    return;
+  }
+  try {
+    if ((false || !('noModule' in HTMLScriptElement.prototype)) && !false) {
+      exposeGlobals();
+      var alert = '<div class="OldBrowser__container" style="width:960px;">  For speed and stability when using VK, install <a href="/badbrowser.php?source=old_browser_alert" target="_blank">one of these browsers</a>.  <span class="OldBrowser__close" aria-label="Close"  role="button" onclick="hideOldBrowser();"></span></div>';
+      alertCont = document.createElement('div');
+      alertCont.className = 'OldBrowser';
+      alertCont.id = 'old_browser_wrap';
+      alertCont.innerHTML = alert;
+      document.body.appendChild(alertCont);
+      trackOldBrowserEvent('showAlert');
+    }
+  } catch(e) {}
+}
+setTimeout(checkOldBrowser, 0);
+})();
+var vk = {
+  ads_rotate_interval: 120000,
+  al: parseInt('3') || 4,
+  id: 342575942,
+  sex: 2,
+  intnat: '1' ? true : false,
+  host: 'vk.com',
+  __domain: 'vk.com',
+  loginDomain: 'https://login.vk.com/',
+  lang: 3,
+  statsMeta: {"platform":"web2","st":false,"time":1648111079,"hash":"cGnYMRlSlaHCJpRpgyvicB5aWxSpnEKo0aNHZFFURaH"},
+  loaderNavSection: '',
+  rtl: parseInt('') || 0,
+  version: 15082048,
+  stDomains: 0,
+  stDomain: 'https://st.vk.com',
+  navPostfix: "",
+  wsTransport: 'https://stats.vk-portal.net',
+  stExcludedMasks: ["loader_nav","lang","sw\/"],
+  zero: false,
+  contlen: 0,
+  loginscheme: 'https',
+  ip_h: 'c52da48893a1404e91',
+  navPrefix: '/',
+  dt: parseInt('0') || 0,
+  fs: parseInt('11') || 13,
+  ts: 1648111079,
+  tz: 10800,
+  vcost: 7,
+  time: [2022, 3, 24, 11, 37, 59],
+  sampleUser: -1, spentLastSendTS: new Date().getTime(),
+  a11y: 0,
+  statusExportHash: '',
+  audioAdsConfig: {"_":"_"},
+  longViewTestGroup: null,
+  cma: 1,
+  lpConfig: {
+    enabled: 1,
+    key: 'df9b7dbc6efed657e112e4709cba20acd7758ffc',
+    ts: 1763781954,
+    url: 'https://im.vk.com/nim342575942',
+    lpstat: 0,
+    sseUrl: 'https://papi.vk.com/pushsse/ruim'
+  },
+
+  pr_tpl: "<div class=\"pr %cls%\" id=\"%id%\"><div class=\"pr_bt\"><\/div><div class=\"pr_bt\"><\/div><div class=\"pr_bt\"><\/div><\/div>",
+  push_hash: '8da3eb1734f7e72c65',
+
+  audioInlinePlayerTpl: "",
+
+  pe: {"vk_apps_svg_qr":1,"upload.send_upload_stat":1,"push_notifier":1,"notify_new_events_box":1,"mini_apps_web_add_to_favorites":1,"mini_apps_web_add_to_menu":1,"mini_apps_m_web_new_stub_page":1,"cookie_secure_default_true":1,"widgets_xdm_same_origin":1,"stickers_money_transfer_suggestions":1,"web2_story_box_enabled":1,"navigation_timespent":1,"market_item_recommendations_view_log":1,"market_item_others_view_log":1,"web_stats_transport_story_view":1,"registration_item_stat":1,"mvk_lazy_static_reload":1,"mute_mvk_err_peaks":1,"notifications_view_new":1,"ads_market_autopromotion_bookmarks_stats":1,"print_stickers_updated":1,"mini_apps_web_call_api_form_data":1,"web_new_photo_editor":1,"web_new_photo_editor_crop":1,"web_photo_editor_hide_entrypoint":1,"web_stats_try_send":1,"expand_web_vitals_grade":1,"page_loading_stat":1,"update_private_snippets_by_queue":1,"stickers_catalog_reload_after_buy":1,"web_stats_send_on_events_limit":1,"batchify_web_stats":1,"sentry_js_sanitize_frames":1,"sentry_js_server_errors_integration":1,"sentry_js_handled_errors_integration":1,"sentry_js_known_issues_mvk_integration":1,"mvk_fallback_css":1,"mvk_fallback_js":1,"mvk_new_static_key":1,"sentry_js_known_issues_web_integration":1,"sentry_js_web_timeouts_forwarding":1,"sentry_js_web_verbose":1,"stickers_web_new_ui":1,"ads_new_reports_web_tgb":1,"ads_autopromotion_web_geo":1,"recognize_mock_turn_off":1,"photo_recognition_web":1,"aliexpress_app_links_with_partner_links":1,"ads_new_reports_web_histories":1,"ads_new_reports_mvk_histories":1,"audio_unauth_preview":1,"ads_easy_promote_goods_new_create_api":1,"messenger_web_themes_easter_egg":1,"mail_history_unread_counter_observer":1,"messenger_empty_pinned_support":1,"force_act_in_get_params":1,"me_re_engine_version_19":1,"vk_mini_apps_new_web_snippet":1,"market_suggest_search_queries":1,"mini_apps_action_menu_mvk":1,"mail_longpoll_unread_counter":1,"faq_clean_up_extra_spaces":1,"loginvk_unauthorized_force_logout":1,"mail_fastchat_reforged":1,"inline_attaches_icons":1,"mvk_quick_search_canceled_requests":1,"mvk_new_avatar_crop":1,"mail_new_conversation_stickers_hint":1,"apps_vk_pay_id_new_for_market_payments":1,"test_folder_masks":1,"simplified_start_conversation":1,"mt_log_disable":1,"microlandings_marketing_blocks":1,"js_errors_no_write_uncaught_errors":1,"fav_dialog_with_yourself":1,"vk_bridge_support_vkwebappshownativeads":1,"tns_track_sections":1,"market_albums_version_2_dnd":1,"mail_business_notify":1,"im_archive_web":1,"messages_new_empty_dialog_screen":1,"me_fc_voice_asr":1,"me_new_ads_module_detect":1,"im_clocks_fix":1,"similar_groups_after_unsubscribe":1,"market_albums_autopromotion_modal":1,"market_related_items":1,"empty_tab_history_check":1,"mvk_redirect_to_app_without_target_url":1,"mvk_vkui_search":1,"one_item_post_promotion_entrypoints":1,"vk_ads_tgb_run_outer_js":1,"ecomm_web_classifieds_profile":1,"cookie_lite_js_save_stat":1},
+  ex: [],
+  acl: [],
+  countryISO: 'CZ',
+  apiConfigDomains: {
+    domain: 'vk.com',
+    apiDomain: 'api.vk.com',
+    loginDomain: 'login.vk.com',
+    connectDomain: 'id.vk.com',
+  },
+  messenger: {
+    topMessengerResetTimeout: 1500
+  },
+
+  isCallsDevEnv: '' ? true : false,
+};
+      var StaticFiles = {'lite.js':{v:103},'dist/common.02ec2b75ffc7c4554e7f.js':{v:'2864a3ec73a6722c3f7f2cd'},'dist/web/docs.3516082bc5c459a19907.js':{v:'5e6dd6c73691b0ec3666817403aa71e0'},'dist/web/docs.js':{v:1}};
+    </script>
+    <script type="text/javascript" src="https://st.vk.com/js/al/lite.js?103"></script><script type="text/javascript" src="https://st.vk.com/dist/common.02ec2b75ffc7c4554e7f.js?2864a3ec73a6722c3f7f2cd"></script><script type="text/javascript" src="https://st.vk.com/dist/web/docs.3516082bc5c459a19907.js?5e6dd6c73691b0ec3666817403aa71e0"></script><link rel="shortcut icon" href="/images/icons/favicons/fav_logo_2x.ico?6" /><link type="text/css" rel="stylesheet" href="/css/al/common.4bd400f9e3625ffd1471.css" /><link type="text/css" rel="stylesheet" href="/css/al/base.e0b77a188f013938fdde.css" /><link type="text/css" rel="stylesheet" href="/css/al/fonts_utf.9521539dd439e0c6a9c5.css" /><link type="text/css" rel="stylesheet" href="/css/al/fonts_cnt_mac.7f6561d492800d8bd061.css" /><title>‚Í.gif</title>
+    <style>html, body {
+  padding: 0px;
+  margin: 0px;
+  height: 100%;
+  border: none;
+}
+.iframe {
+  border: none;
+  display: block;
+  box-sizing: border-box;
+  padding-top: 50px;
+  margin-top: -50px;
+}
+.docs_name {
+  display: block;
+  padding-top: 7px;
+}
+.docs_info {
+  padding: 7px 10px 0px;
+  color: #939699;
+}
+.docs_panel_wrap {
+  height: 50px;
+}
+.docs_panel {
+  background: #F1F1F1;
+  position: fixed;
+  width: 100%;
+  -webkit-box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.15);
+}
+.docs_panel .docs_del_wrap {
+  margin: 0 5px;
+}
+.can_zoom {
+  max-width: 100%;
+  cursor: -webkit-zoom-in;
+  cursor: -moz-zoom-in;
+  cursor: -zoom-in;
+}
+.docs_panel .fl_r + .fl_r {
+    margin-right: 10px;
+}
+.can_zoom_out {
+  min-width: 100%;
+  cursor: -webkit-zoom-out;
+  cursor: -moz-zoom-out;
+  cursor: -zoom-out;
+}
+.SaveToDocsButton:not(.flat_btn_lock):before {
+  content: '';
+  display: inline-block;
+  background: url('/images/icons/follow_icon.png') no-repeat 0 -28px;
+  width: 20px;
+  height: 15px;
+  vertical-align: top;
+}
+.SaveToDocsButton--saved:not(.flat_btn_lock):before {
+  background-position: 0 -13px;
+}</style>
+  </head>
+
+  <body onkeydown="if (event.keyCode == 83 && (event.ctrlKey || event.metaKey)) return Docs.saveDoc(event);">
+    <noindex>
+      <div id="system_msg" class="fixed"></div>
+      <div id="utils"></div>
+      <div id="box_layer_bg" class="fixed"></div><div id="box_layer_wrap" class="scroll_fix_wrap fixed"><div id="box_layer"><div id="box_loader"><div class="loader"></div><div class="back"></div></div></div></div>
+      <div id="stl_left"></div><div id="stl_side"></div>
+      </div>
+      <script type="text/javascript">
+        domStarted();
+      </script>
+      <div class="docs_panel_wrap">
+  <div class="docs_panel">
+    <div class="clear_fix" style="padding: 10px 20px;">
+      <button class="flat_button fl_r" onclick="return Docs.saveDoc();">Download file</button><button class="flat_button fl_r secondary_dark SaveToDocsButton" onclick="return Docs.saveToDocs('a911b27583454d8f0f', 'a7b0e13045f0862d74');">Save to Files</button>
+      <div class="docs_info fl_r"></div>
+      <a class="docs_name fl_l" onclick="return Docs.saveDoc();"><b>‚Í.gif</b></a>&nbsp;
+    </div>
+  </div>
+</div><center><img src="https://psv4.userapi.com/c856336/u430197973/docs/d13/69d7efc544c3/Vk.gif?extra=xtcuDPNVxJU8LhlG8ME83s9M0J00NajdArGkBKYG_5roQeWD-LEg1DmVQ7Ee85bzvMbFfdZ8USZzt8ejncCi-QtdvZxuEXCHnQKLhMvIxIAxNWav26tLSGvo-FVkm1TArQ180ysrLoCikXN8Dhjr1m21" class="can_zoom" onclick="Docs.imgZoom(this);" /></center>
+      <script type="text/javascript">
+        domReady();
+        
+addLangKeys({"docs_save_to_docs":"Save to Files","docs_saved_to_docs":"Saved","audio_claim_delete":"delete the track","audio_claim_delete_capital":"Delete track","audio_claim_objection":"by filling out a special form","audio_claim_warning":"The audio file {audio} was removed from public access by request of the copyright holder.","audio_claim_warning_title":"Arguable Audio File","audio_claimed_geo":"{audio} is not available in your region.","audio_claimed_replacement_available":"This audio file has been blocked at the request of the copyright holder. You can replace it with the original audio file of the copyright holder <b>{original}<\/b>.","audio_replace_with_original":"Replace","audio_site_rules_violation_header":"Prohibited audio file","audio_site_rules_violation_warning":"{audio} has been removed from public access for violating the VK Terms of Service.","box_close":"Close","box_no":"No","box_send":"Send","box_yes":"Yes","calls_are_you_sure_to_call_this_user":"Are you sure you want to call this user?","captcha_cancel":"Cancel","captcha_enter_code":"Enter the code from the picture","captcha_send":"Send","docs_add_to_group_tt":"Add to community documents","docs_add_tt":"Add file","docs_claimed_doc_hint":"The file has been removed from†public access and†is†available only to you","docs_edit_tt":"Edit file","docs_empty_search":"No results for %s found in†your files","docs_no_group_docs":"Community files will be displayed here.","docs_no_user_docs":"Your files will be displayed here.","docs_remove_tt":"Remove file","docs_upload_arch_fail":"The archive contains an invalid file and cannot be uploaded to the Documents section.","docs_upload_arch_mp3_fail":"The archive contains an MP3 file and can&#39;t be uploaded to Files.<br>You can upload MP3 files in the Music section.","docs_upload_fail":"Failed to upload the file. Executable files and files over 2 GB aren&#39;t allowed.","docs_upload_mp3_fail":"MP3 files can&#39;t be uploaded to Files.<br>You can upload them in the Music section.","docs_upload_music_fail":"This file type can&#39;t be uploaded to Documents.","global_action_confirmation":"Confirm action","global_add_media":"Attach","global_apps":"Apps","global_audio_only_with_subscription_btn":"Learn more","global_audio_only_with_subscription_text":"Access has been limited by the artist or their representative. Subscribe and gain access to a wider range of music.","global_audio_only_with_subscription_title":"This track is only available through subscription","global_back":"Back","global_box_error_title":"Error","global_box_title_back":"Back","global_cancel":"Cancel","global_captcha_input_here":"Enter code","global_chats":"Chats","global_close":"Close","global_communities":"Communities","global_date":["","{day}†{month}†{year}","yesterday","today","tomorrow"],"global_date_l":["","{day}†{month}†{year}","yesterday","today","tomorrow"],"global_delete":"Delete","global_error":"Error","global_error_occured":"An error occurred","global_friends":"Friends","global_hours_ago":["","%s hour ago","%s hours ago"],"global_just_now":"just now","global_mins_ago":["","%s minute ago","%s minutes ago"],"global_money_amount_rub":["","%s ruble","%s rubles"],"global_news_search_results":"Search results by news","global_recaptcha_title":"Confirm action","global_secs_ago":["","%s second ago","%s seconds ago"],"global_share_button_call":"Call","global_short_date":["","{day} {month}","yesterday","today","tomorrow"],"global_short_date_time":["","{day} {month} at {hour}:{minute} {am_pm}","yesterday at {hour}:{minute} {am_pm}","today at {hour}:{minute} {am_pm}","tomorrow at {hour}:{minute} {am_pm}"],"global_short_date_time_l":["","{day} {month} at {hour}:{minute} {am_pm}","yesterday at {hour}:{minute} {am_pm}","today at {hour}:{minute} {am_pm}","tomorrow at {hour}:{minute} {am_pm}"],"global_show_all_results":"Show all results","global_to_top":"Go up","global_unknown_error":"Unknown error","global_user_is_online":"online","global_user_is_online_mobile":"online from mobile","global_warning":"Warning","global_word_hours_ago":["","one hour ago","two hours ago","three hours ago","four hours ago","five hours ago"],"global_word_mins_ago":["","one minute ago","two minutes ago","three minutes ago","4 minutes ago","5 minutes ago"],"global_word_secs_ago":["","one second ago","two seconds ago","three seconds ago","four seconds ago","five seconds ago"],"head_search_results":"Search results","index_sel_bday":"Day","login_blocked_delete_page_header":"Delete profile","login_blocked_sure_delete_page_question":"Are you sure you want to delete your profile?","login_fast_unblocked_wait_description":"Account unblocked. You&#39;ll be able to use VK again in a few seconds.","mail_money_transfer_cancel_btn":"Cancel transfer","mail_money_transfer_cancel_confirm":"Are you sure you want to cancel the money transfer?","mail_money_transfer_decline_btn":"Decline","mail_money_transfer_decline_confirm":"Are you sure you want to decline the money transfer?","months_of":{"1":"January","2":"February","3":"March","4":"April","5":"May","6":"June","7":"July","8":"August","9":"September","10":"October","11":"November","12":"December"},"months_sm_of":{"1":"Jan","2":"Feb","3":"Mar","4":"Apr","5":"May","6":"Jun","7":"Jul","8":"Aug","9":"Sep","10":"Oct","11":"Nov","12":"Dec"},"news_fb_money_transfer_decline_btn":"Decline","news_fb_money_transfer_decline_confirm":"Are you sure you want to decline the money transfer?","payment_redirect":"Redirecting to <b>%s<\/b>.<br>Please wait...","payments_app_add_votes_delay":"We are waiting for confirmation from the app. If the transfer is not confirmed within an hour, we will return the votes to your balance.","payments_app_order_box_title":"Votes transfer","payments_back_to_offers_list":"Back to list","payments_back_to_ps_list":"Back to list","payments_bonus_votes":["","+ bonus %s vote","+ bonus %s votes"],"payments_cards_redirect":"Redirecting to payment gateway.<br>Please wait...","payments_change_phone_number":"Change the number","payments_dont_remember_card_btn":"No","payments_error_invalid_email":"Invalid email entered.","payments_for_get_n_votes":["","<b>%s<\/b> vote","<b>%s<\/b> votes"],"payments_get_votes_box_close_notice":"The transaction is being processed. We will send you a notification when the votes have been added to your account.","payments_get_votes_delay":"We are waiting for a reply from the payment gateway. As soon as we receive it, we will credit the votes to {link}your account{\/link} immediately.<br><br>If you do not receive votes to your account within an hour, please contact our {link2}payment support team{\/link2}.","payments_get_votes_for_X":"Get votes for {amount}","payments_get_votes_input_phone":"Please enter a <b>phone number<\/b> for payment:","payments_get_votes_new":"Get votes","payments_get_votes_ps_enter_code":"To pay, please enter the confirmation code that was sent to you","payments_go_change_pay_type":"Change payment method","payments_go_ps_list":"Back to payment methods","payments_instant_pay_amount_limit_error":"Your account has insufficient funds, or the limit for charging without confirmation has been reached.<br>To make a payment with confirmation, please click {link}Proceed to payment{\/link}.","payments_internet_getting_votes":"Get Votes","payments_invalid_code":"Incorrect code.","payments_landing_cancelled":"{tag_span}Unfortunately, your payment was not accepted.{\/tag_span}<br>Please contact {link}Support{\/link}.","payments_max_amount_limit_votes":"Maximum number of votes for paying through the chosen payment system ó %s.","payments_min_amount_limit_votes":"The minimum number of votes you can buy using the selected payment system is %s.","payments_money_for_votes":["","{money} (%s vote)","{money} (%s votes)"],"payments_money_link_btn_feature_text":"Share a link or QR code on VK or elsewhere to start collecting money","payments_money_link_tab_feature_text":"This is where you can find links and a QR code","payments_money_request_error_chunk_amount_too_big":"The recommended amount cannot be larger than the overall requested amount.","payments_money_request_error_max_chunk_amount_currency":"Recommended maximum amount: {max_amount}","payments_money_request_error_min_chunk_amount_currency":"Recommended minimum amount: {min_amount}","payments_money_request_error_no_accept_card":"Please enter your card information to receive transfers automatically.","payments_money_transfer_about_title":"Terms","payments_money_transfer_amount_limits":"Minimum transfer amount: {min_amount}","payments_money_transfer_btn":"Send money","payments_money_transfer_commission_undefined":"Commission is dependent on card&#39;s payment system","payments_money_transfer_error_max_amount_currency":"Maximum transfer amount: {max_amount}","payments_money_transfer_error_min_amount_currency":"Minimum transfer amount: {min_amount}","payments_money_transfer_low_balance":"Insufficient funds","payments_money_transfer_new_card":"New card","payments_money_transfer_will_be_requested":"Request amount: {amount}","payments_pay_order_btn":"Pay","payments_payment_cancelled":"The payment process was canceled.","payments_remember_card_btn":"Yes, receive on this card","payments_rest_amount_day_votes":"Your daily limit has been exceeded. The maximum number of votes you can buy using the selected payment system is %s.","payments_rest_amount_week_votes":"Your weekly limit has been exceeded. The maximum number of votes you can buy using the selected payment system is %s.","payments_revoke_token_confirm":"Are you sure you want to unlink this wallet?","payments_save_phone":"Save number","payments_service_cost":"The service costs <b>{amount}<\/b>","payments_service_cost_rubles":["","The service costs <b>%s ruble<\/b>.","The service costs <b>%s rubles<\/b>."],"payments_sms_money_fail":"Your request could not be processed. Please try again later.","payments_spasibo_rules_not_accepted":"Please accept the terms to continue","payments_to_get_send_sms":["","To get <b>%s<\/b> vote, send an SMS with <b>{text}<\/b> to <b>{number}<\/b>","To get <b>%s<\/b> votes, send an SMS with <b>{text}<\/b> to <b>{number}<\/b>"],"payments_transfer_method_without_fee_for_mastercard":"No fee from 300 rubles for Mastercard and Maestro","payments_transfer_without_fee":"No fee","payments_unbind_card_btn":"Delete","payments_unbind_card_confirm":"Are you sure you want to unlink this payment card?","payments_vkpay_low_balance_text":"Add funds to your balance for free.","payments_vkpay_low_balance_title":"Insufficient funds","payments_vkpay_topup_button":"Add funds","payments_votes_cost_in_rubles":["","Cost: %s ruble","Cost: %s rubles"],"payments_waiting_app_order_complete":"Completing transfer...","payments_waiting_payment_complete":"Completing payment. Please wait...","payments_waiting_payment_complete_still":"Please wait...","payments_waiting_transfer_complete":"Transfer awaiting confirmation","payments_web_no_sum":"Please select the desired number of votes.","reg0_change_mail":"Change email","reg0_error_bad_email":"Incorrect email.","reports_thanks_for_report":"Thank you, your complaint has been accepted.","settings_addrbox_hint":"Please use <b>Latin<\/b> letters, <b>numbers<\/b>, or <b>&quot;_&quot;<\/b>.","stories_bad_browser":"Stories are not supported by your browser","stories_mask_sent":"Mask sent to phone","text_N_symbols_remain":["","%s character remaining","%s characters remaining"],"text_exceeds_symbol_limit":["","You&#39;ve exceeded the limit by %s character","You&#39;ve exceeded the limit by %s characters"],"votes_flex":["","vote","votes"],"votes_transfer_choose_recipients":"Select a user","votes_transfer_start_typing_recipient":"Start typing a friend&#39;s name"});
+addTemplates({"_":"_"});Docs.initDoc({"docOwnerId":430197973,"docId":539757647,"docExt":"gif","docUrl":"https:\/\/psv4.userapi.com\/c856336\/u430197973\/docs\/d13\/69d7efc544c3\/Vk.gif?extra=xtcuDPNVxJU8LhlG8ME83s9M0J00NajdArGkBKYG_5roQeWD-LEg1DmVQ7Ee85bzvMbFfdZ8USZzt8ejncCi-QtdvZxuEXCHnQKLhMvIxIAxNWav26tLSGvo-FVkm1TArQ180ysrLoCikXN8Dhjr1m21","docBuyLink":"\/doclinks.php?link=&hash=c29555746f65cfaa6d3d6d8b142a4905&act=buy_from_preview_page&platform=web2"});;
+      </script>
+    </noindex>
+  </body>
+</html>
